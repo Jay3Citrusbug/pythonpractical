@@ -20,9 +20,14 @@ for i in range(0,len(fruits)):
         score = score+1
         com.append('{}'.format('|'))
         
-        for h in com:
-          print(h) 
-        
+        if i==9:
+          com.pop()
+          com.append('{}'.format('_________________'))
+      
+            
+          for h in com:
+            print(h) 
+            
             
     else:
      if final not in fruits:
