@@ -25,9 +25,8 @@ for i in range(0,len(fruits)):
           com.append('{}'.format('_________________'))
       
             
-          for h in com:
+          for h in com: 
             print(h) 
-            
             
     else:
      if final not in fruits:
