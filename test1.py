@@ -22,7 +22,7 @@ for i in range(0,len(fruits)):
         
         if i==9:
           com.pop()
-          com.append('{}'.format('_________________'))
+          com.append('{}'.format('--------------------'))
       
             
           for h in com: 
