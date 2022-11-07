@@ -67,6 +67,3 @@
 # # print(count2)
 # # print("total count is",count+count1+count2)
 
-                          
-
-
