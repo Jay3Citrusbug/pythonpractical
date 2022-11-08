@@ -1,4 +1,5 @@
 import random
+history_list=[]
 class atm():
     
     def __init__(self,username,acco_number,balance=0):
@@ -16,6 +17,7 @@ class atm():
     def deposite(self):
         amount=int(input("enter deposite amount : "))
         self.balance=self.balance+amount
+        history_list.append("credit amount {}".format(self.balance))
         print("your total balance is",self.balance)
         
     def withdraw(self):
@@ -26,10 +28,17 @@ class atm():
     
         else:    
             self.balance=self.balance-amount
+            history_list.append("debit amount {}".format(self.balance))
             print("after withdraw your balance is",self.balance)
     
     def check_balance(self):
         print("your acount balance is ",self.balance)
+        history_list.append("your balance amount is {}".format(self.balance))
+         
+    def history(self):
+        global history_list
+        for i in history_list:
+            print(i)
         
     def transaction(self):
         
@@ -42,6 +51,7 @@ class atm():
             3. Deposit
             4. Withdraw
             5. Exit
+            6. History
         """)
         
         while True:
@@ -58,6 +68,10 @@ class atm():
                     obj.deposite()
                 elif opt==4:
                     obj.withdraw()
+                elif opt==6:
+                    print("your history is")
+                    obj.history()
+                    
                 
                 elif opt == 5:
                     print(f"""
